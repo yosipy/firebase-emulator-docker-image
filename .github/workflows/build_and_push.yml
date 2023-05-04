@@ -9,6 +9,7 @@ on:
 
 jobs:
   docker:
+    if: startsWith(github.ref, 'refs/tags/v') # Runs only when Tag is pushed
     runs-on: ubuntu-latest
 
     steps:
